@@ -1,0 +1,24 @@
+
+1x    Alespoň 7 rozdílných tříd. Třídy mají atributy a/nebo metody, konstruktor a destruktor. 0,5b
+    Třídy jsou v samostatných .h a .cpp souborech, v hlavním .cpp souboru je pouze funkce main(). 0,5b
+
+2.    V main() funkci je vytvořeno několik instancí tříd a jsou volány metody, které demonstrují funkci vytvořených struktur a dávají smysl v kontextu 	projektu. 1b
+
+3.x    Alespoň jedna třída má implementováno dynamické pole ukazatelů na objekty jiné třídy. 0,5b
+    Jsou implementovány metody pro přidání a mazání prvků pole (včetně přeskládání prázdného místa). 0,5b
+
+4x    Alespoň jedna třída má přetížený konstruktor. 1b
+
+5x    Alespoň jedna třída má třídní proměnnou (static), která udržuje počet instancí třídy, včetně implementace do konstruktoru a destruktoru. 1b
+
+6x    V projektu existuje dědičná hiearchie obsahující alespoň 3 třídy. 0,5b
+
+7.    Dědičnost bude obsahovat a používat rozšíření (dat i metod), změna chování s využitou pozdní vazbou 0,5b
+
+8.    K projektu je napsána průvodní dokumentace. 0,5b
+
+9x    V projektu je implementován protected atribut. 0,5b
+
+10   V projektu je implementována alespoň jedna ryze abstraktní třída. 1b
+
+11.   V projektu je využit polymorfismus (např. v dynamickém poli ukazatelů na objekty různých tříd). 1b
