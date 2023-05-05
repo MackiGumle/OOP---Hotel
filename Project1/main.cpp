@@ -2,22 +2,33 @@
 
 int main()
 {
-	Room pokoj(1, 100);
-	Guest* pepa = new Guest("Pepa");
-	Guest* repa = new Guest("Repa");
-	Guest* zdepa = new Guest("Zdepa");
-	Guest* jozo= new Guest("Jozo");
-
-	pokoj.addGuest(pepa);
-	pokoj.addGuest(repa);
-	pokoj.addGuest(zdepa);
-	pokoj.addGuest(jozo);
+	Room* pokoj1 = new Room(1, 3400);
+	Room* pokoj2 = new Room(2, 6000);
+	vector<Room*> pokoje;
+	pokoje.push_back(pokoj1);
+	pokoje.push_back(pokoj2);
 	
-	pokoj.printGuests();
+	Hotel* hotel = new Hotel("HotelName", pokoje, 3);
 
-	pokoj.remGuest(zdepa);
+	// Pridani guestu do pokoju
+	// Polymorfismus [Guest] a [Manager] jako [Person]
+	pokoj1->addGuest(new Guest("Pepa", true));
+	pokoj1->addGuest(new Guest("Honza", true));
+	pokoj2->addGuest(new Guest("Repa"));
+	pokoj2->addGuest(new Manager("Lojza", (float)7550.9, "Hotel"));
+	pokoj2->addGuest(new Guest("Zdepa"));
 
-	pokoj.printGuests();
+	hotel->showInfo();
+
+	// Odstraneni guesta a preskladani pokoje
+	cout << "Hotel po odstraneni Pepy, Repy a Honzy: " << endl;
+	pokoj1->remGuest(pokoj1->getGuest("Pepa"));
+	pokoj1->remGuest(pokoj1->getGuest("Honza"));
+	pokoj2->remGuest(pokoj2->getGuest("Repa"));
+	hotel->showInfo();
+
+	cout << "Odstraneni hotelu:" << endl;
+	delete hotel;
 
 	return 0;
 }
